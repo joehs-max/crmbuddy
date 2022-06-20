@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRM Buddy</title>
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;1,300&display=swap"
+        rel="stylesheet">
+    <link rel="images" href="images/">
+
+</head>
+
+<body>
+
+    <header class="desktop" id="top-nav">
+
+        <img class="logo" src="images/CRM-Buddy-Logo.png" alt="CRM Buddy Logo"">
+        <div class=" desktop-nav">
+        <a href="">Stats</a>
+        <a href="">Deals</a>
+        <a href="">Tickets</a>
+        <a href="">Trials</a>
+        <a href="">Settings</a>
+        </div>
+        <div class="for-hamburger">
+            <div class=" user">
+                <img class=" avatar" src="images/avatar.jpg" alt="Avatar"">
+        <p>J Roche</p>
+        </div>
+        <div class=" hamburger" id="menu-trigger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+
+    </header>
+
+    <main>
+
+        <div class=" email">
+            <p>...do I know you?</p>
+            <form name=" contact">
+                <label for="email">Enter email:</label>
+                <input type="email" name="Email" placeholder="name@domain.com" />
+                <input type="submit" />
+            </form>
+        </div>
+
+        <section class="tables">
+            <div class="contact">
+                <h3>Contact Information</h3>
+                <table class="contact-detail">
+                    <tr>
+                        <th>Property</th>
+                        <th>Value</th>
+                    </tr>
+                    <tr>
+                        <td>Name</td>
+                        <td>data</td>
+                    </tr>
+                    <tr>
+                        <td>Address</td>
+                        <td>data</td>
+                    </tr>
+                    <tr>
+                        <td>Company</td>
+                        <td>data</td>
+                    </tr>
+                    <tr>
+                        <td>Create date</td>
+                        <td>data</td>
+                    </tr>
+                    <tr>
+                        <td>Last activity</td>
+                        <td>data</td>
+                    </tr>
+                    <tr>
+                        <td>Active trial (Y/N)</td>
+                        <td>data</td>
+                    </tr>
+                    <tr>
+                        <td>Deals #</td>
+                        <td>data</td>
+                    </tr>
+                    <tr>
+                        <td>Tickets #</td>
+                        <td>data</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="deals-tickets">
+                <div class="Deals">
+                    <h3>Deals</h3>
+                    <table>
+                        <tr>
+                            <th>Name</th>
+                            <th>Stage</th>
+                            <th>Value</th>
+                            <th>Close date</th>
+                        </tr>
+                        <tr>
+                            <td>Data</td>
+                            <td>Data</td>
+                            <td>Data</td>
+                            <td>Data</td>
+                        </tr>
+                        <tr>
+                            <td>Data</td>
+                            <td>Data</td>
+                            <td>Data</td>
+                            <td>Data</td>
+                        </tr>
+                        <tr>
+                            <td>Data</td>
+                            <td>Data</td>
+                            <td>Data</td>
+                            <td>Data</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="Tickets"></div>
+                <h3>Tickets</h3>
+                <table>
+                    <tr>
+                        <th>Name</th>
+                        <th>Issue</th>
+                        <th>Status</th>
+                        <th>Create date</th>
+                    </tr>
+                    <tr>
+                        <td>Data</td>
+                        <td>Data</td>
+                        <td>Data</td>
+                        <td>Data</td>
+                    </tr>
+                    <tr>
+                        <td>Data</td>
+                        <td>Data</td>
+                        <td>Data</td>
+                        <td>Data</td>
+                    </tr>
+                    <tr>
+                        <td>Data</td>
+                        <td>Data</td>
+                        <td>Data</td>
+                        <td>Data</td>
+                    </tr>
+                </table>
+            </div>
+            </div>
+
+        </section>
+
+        <section class="approve-trial">
+            <h3>Approve 14-day trial</h3>
+            <button>Approve</button>
+        </section>
+
+    </main>
+    <!-- Not sure why the main end is indented! -->
+    <footer>
+
+        <!-- Will vary for mobile where Settings option will move down  -->
+        <p class="rights">2022 &copy; CRM Buddy - All rights reserved</p>
+
+    </footer>
+
+    <aside class="side-menu-position side-menu-design" id="side-menu">
+        <header class="side-menu-header">
+            <img class="logo" src="images/CRM-Buddy-Logo.png" alt="CRM Buddy Logo"">
+
+            <div class=" for-hamburger-close">
+            <div class=" user">
+                <img class=" avatar" src="images/avatar.jpg" alt="Avatar"">
+            </div>
+            <div class=" hamburger-close" id="menu-close" alt="Close this menu">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            </div>
+        </header>
+        <ul class="side-menu-content">
+            <li>Stats</li>
+            <li>Deals</li>
+            <li>Tickets</li>
+            <li>Trials</li>
+            <li class="settings">Settings</li>
+        </ul>
+    </aside>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

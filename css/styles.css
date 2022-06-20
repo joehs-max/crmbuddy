@@ -1,0 +1,304 @@
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: antiquewhite;
+}
+
+header {
+    background-color: rgb(93, 80, 71);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 40px;
+    padding: 15px 25px;
+    width: calc(100% - 50px);
+    align-items: center;
+    border-bottom: solid 1px;
+    border-color: rgb(223, 157, 113);
+    margin: 0%;
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+    border-radius: 20px;
+}
+
+.avatar {
+    width: 20px;
+    height: auto;
+    border: solid 2px;
+    border-radius: 20px;
+    border-color: rgb(223, 157, 113);
+}
+
+header a {
+    background-color: rgb(252, 143, 77);
+    text-decoration: none;
+    color: rgb(210, 211, 212);
+    padding: 5px 20px 5px 20px;
+    border-radius: 3px;
+    font-size: 12px;
+    margin-right: 10px;
+}
+
+header a:hover {
+    color: rgb(252, 143, 77);
+    background-color: rgb(210, 211, 212);
+}
+
+header p {
+    font-size: 12px;
+    color: rgb(210, 211, 212);
+    padding: 5px;
+    margin: 0%;
+}
+
+.user {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.user p {
+    font-size: 8px;
+}
+
+.hamburger div {
+    background-color: rgb(252, 143, 77);
+    height: 2px;
+    margin: 3px 0;
+    border-radius: 3px;
+    transition: 0.5s;
+}
+
+.hamburger {
+    width: 20px;
+    margin: 10px;
+    cursor: pointer;
+
+}
+
+/* Suppress transitions on standard hamburger menu
+.hamburger:hover div:first-child {
+    transform: translateY(5px) rotate(135deg);
+}
+
+.hamburger:hover div:nth-child(2) {
+    transform: scale(0);
+}
+
+.hamburger:hover div:last-child {
+    transform: translateY(-5px) rotate(-135deg)
+} */
+
+.hamburger-close div {
+    background-color: rgb(252, 143, 77);
+    height: 2px;
+    margin: 3px 0;
+    border-radius: 3px;
+    transition: 0.5s;
+}
+
+.hamburger-close {
+    width: 20px;
+    margin: 10px;
+    cursor: pointer;
+
+}
+
+.hamburger-close div:first-child {
+    transform: translateY(5px) rotate(135deg);
+}
+
+.hamburger-close div:nth-child(2) {
+    transform: scale(0);
+}
+
+.hamburger-close div:last-child {
+    transform: translateY(-5px) rotate(-135deg)
+}
+
+
+.email {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(93, 80, 71);
+    color: rgb(210, 211, 212);
+    font-size: 12px;
+    padding: 10px 0px 10px 10px;
+}
+
+.email p {
+    padding-right: 20px;
+}
+
+input[type=email] {
+    background-color: rgb(210, 211, 212);
+    padding: 5px;
+    border-color: rgb(252, 143, 77);
+    border-radius: 3px;
+    margin: 0px 5px 0px 5px;
+    width: 200px;
+}
+
+input[type=button],
+input[type=submit],
+input[type=reset] {
+    background-color: rgb(252, 143, 77);
+    border: none;
+    color: rgb(210, 211, 212);
+    padding: 5px 10px 5px 10px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+table,
+th,
+td {
+    border-bottom: 1px solid;
+    border-color: rgb(223, 157, 113);
+}
+
+table {
+    width: 100%;
+    border-color: rgb(223, 157, 113);
+}
+
+th {
+    text-align: left;
+    font-size: 15px;
+}
+
+.tables {
+    background-color: rgb(93, 80, 71);
+    color: rgb(210, 211, 212);
+    font-size: 12px;
+    padding: 10px 0px 10px 10px;
+}
+
+.tables h3 {
+    font-size: 20px;
+}
+
+.approve-trial {
+    display: flex;
+    margin: 10px;
+    justify-content: center;
+    background-color: rgb(93, 80, 71);
+    color: rgb(210, 211, 212);
+    font-size: 12px;
+    padding: 10px 0px 10px 10px;
+    border: solid 1px;
+    border-color: rgb(223, 157, 113);
+}
+
+.approve-trial button {
+    background-color: rgb(252, 143, 77);
+    border: none;
+    color: rgb(210, 211, 212);
+    padding: 0px 20px 0px 20px;
+    text-decoration: none;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.rights {
+    background-color: rgb(93, 80, 71);
+    color: rgb(210, 211, 212);
+    font-size: 8px;
+    padding: 5px 0px 5px 10px;
+    text-align: center;
+}
+
+
+@media only screen and (max-width: 600px) {
+    body {
+        background-color: rgb(93, 80, 71);
+        margin: 0px 10px 0px 10px;
+    }
+
+    .desktop-nav,
+    .user p {
+        display: none;
+    }
+
+    /* Need to check function */
+    /* #top-nav {
+        position: fixed;
+    } */
+
+    .side-menu-position {
+        padding-top: 25px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 2;
+    }
+
+    .side-menu-design {
+        background-color: rgb(93, 80, 71);
+        /* background-image: url(/images/Trends-Digitalisierung-CRM-2018-1024x591.jpeg);
+    background-size: 1024px 591px; */
+        /* background-repeat: repeat; */
+        background-size: cover;
+        cursor: pointer;
+        opacity: 0.5;
+        transform: translateX(100%);
+        transition: 0.4s ease-in-out;
+        margin: 0%;
+        padding: 0%;
+        /* z-index: -1; */
+    }
+
+    .side-menu-content {
+        color: rgb(210, 211, 212);
+        font-size: 24px;
+        /* could use ems here I guess but eh... */
+        margin: 25px;
+        padding-left: 0;
+        /* zeroing it out */
+    }
+
+    .side-menu-content li {
+        list-style: none;
+        margin-bottom: 25px;
+    }
+
+    .settings {
+        background-color: rgb(210, 211, 212);
+        color: rgb(252, 143, 77);
+        padding: 15px 0;
+        text-align: center;
+        width: 100%;
+    }
+
+    .show-menu {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+
+}
+
+@media only screen and (min-width: 600px) {
+    body {
+        background-color: rgb(93, 80, 71);
+    }
+
+    .hamburger div {
+        display: none;
+    }
+
+    .tables {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    aside {
+        display: none;
+    }
+
+
+}
