@@ -302,6 +302,11 @@ th {
         /* background-color: rgb(93, 80, 71);
 } */
 
+    aside {
+        display: none;
+    }
+
+
     .hamburger div {
         display: none;
     }
