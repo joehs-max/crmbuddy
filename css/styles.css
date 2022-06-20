@@ -1,11 +1,16 @@
 body {
     font-family: 'Lato', sans-serif;
-    background-color: antiquewhite;
+    /* background-color: antiquewhite; */
+    background-image: linear-gradient(to bottom right, darkblue, black);
 }
 
 header {
     /* background-color: rgb(93, 80, 71); */
-    background-color: #6d7878;
+    /* background-color: #6d7878; */
+    /* background-color: #585659; */
+    /* background-color: black; */
+    /* background-color: darkblue; */
+    /* background-image: linear-gradient(to bottom right, darkblue, black); */
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -123,7 +128,9 @@ header p {
 .email {
     display: flex;
     flex-direction: column;
-    background-color: rgb(93, 80, 71);
+    /* background-color: rgb(93, 80, 71); */
+    /* background-color: #6d7878; */
+    /* background-color: #585659; */
     color: rgb(210, 211, 212);
     font-size: 12px;
     padding: 10px 0px 10px 10px;
@@ -172,7 +179,9 @@ th {
 }
 
 .tables {
-    background-color: rgb(93, 80, 71);
+    /* background-color: rgb(93, 80, 71); */
+    /* background-color: #6d7878; */
+    /* background-color: black; */
     color: rgb(210, 211, 212);
     font-size: 12px;
     padding: 10px 0px 10px 10px;
@@ -186,7 +195,8 @@ th {
     display: flex;
     margin: 10px;
     justify-content: center;
-    background-color: rgb(93, 80, 71);
+    /* background-color: rgb(93, 80, 71); */
+    /* background-color: #6d7878; */
     color: rgb(210, 211, 212);
     font-size: 12px;
     padding: 10px 0px 10px 10px;
@@ -205,7 +215,8 @@ th {
 }
 
 .rights {
-    background-color: rgb(93, 80, 71);
+    /* background-color: rgb(93, 80, 71); */
+    /* background-color: #6d7878; */
     color: rgb(210, 211, 212);
     font-size: 8px;
     padding: 5px 0px 5px 10px;
@@ -215,7 +226,8 @@ th {
 
 @media only screen and (max-width: 600px) {
     body {
-        background-color: rgb(93, 80, 71);
+        /* background-color: rgb(93, 80, 71); */
+        /* background-color: #6d7878; */
         margin: 0px 10px 0px 10px;
     }
 
@@ -240,10 +252,12 @@ th {
     }
 
     .side-menu-design {
-        background-color: rgb(93, 80, 71);
+        /* background-color: rgb(93, 80, 71); */
+        /* background-color: #6d7878; */
         /* background-image: url(/images/Trends-Digitalisierung-CRM-2018-1024x591.jpeg);
     background-size: 1024px 591px; */
         /* background-repeat: repeat; */
+        background-image: linear-gradient(to bottom right, darkblue, black);
         background-size: cover;
         cursor: pointer;
         opacity: 0.1;
@@ -284,9 +298,9 @@ th {
 }
 
 @media only screen and (min-width: 600px) {
-    body {
-        background-color: rgb(93, 80, 71);
-    }
+    /* body {
+        /* background-color: rgb(93, 80, 71);
+} */
 
     .hamburger div {
         display: none;
@@ -295,6 +309,11 @@ th {
     .tables {
         display: flex;
         justify-content: space-around;
+        width: 100%;
+    }
+
+    table {
+        width: 100%;
     }
 
     aside {
