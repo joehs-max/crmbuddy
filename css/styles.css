@@ -303,7 +303,7 @@ th {
         /* background-color: rgb(93, 80, 71);
 } */
 
-    aside {
+    aside .side-menu-position {
         display: none;
     }
 
@@ -322,9 +322,9 @@ th {
         width: 100%;
     }
 
-    aside {
+    /* aside .side-menu-position {
         display: none;
-    }
+    } */
 
 
 }
