@@ -15,7 +15,10 @@ function sideMenuDisappears() {
 document.getElementById('test-area').addEventListener('click', showModal);
 document.getElementById('close-dialog').addEventListener('click', closeModal);
 
+// const mask = document.querySelector("#mask");
+
 function showModal() {
+    document.getElementById('mask').classList.add('show-mask');
     document.getElementById('alert').classList.add('show-modal');
     console.log("we get this far");
 }
