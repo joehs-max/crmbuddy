@@ -2,6 +2,7 @@ body {
     font-family: 'Lato', sans-serif;
     /* background-color: antiquewhite; */
     background-image: linear-gradient(to bottom right, darkblue, black);
+    /* height: 100vh; */
 }
 
 header {
@@ -185,7 +186,7 @@ th {
     /* background-color: black; */
     color: rgb(210, 211, 212);
     font-size: 12px;
-    padding: 10px 0px 10px 10px;
+    padding: 10px;
 }
 
 .tables h3 {
@@ -234,6 +235,8 @@ th {
     display: flex;
     align-items: center;
     justify-content: center;
+    opacity: 0.5;
+    z-index: -1;
 } */
 
 .modal {
@@ -247,6 +250,7 @@ th {
     border: 5px solid rgb(252, 143, 77);
     padding: 10px 50px;
     text-align: center;
+    z-index: 2;
 }
 
 .modal a {
@@ -286,13 +290,27 @@ th {
     } */
 
     .side-menu-position {
-        padding-top: 25px;
+
+        bottom: 0;
+        left: 0;
+        right: 0;
+        top: 0;
+        opacity: 0;
+        overflow-y: scroll;
+        padding-top: 0px;
+        /* padding: 15px 30px; */
+        position: fixed;
+        transition: all 0.35s ease-in-out;
+        transform: translateX(100%);
+        z-index: 10;
+
+        /* padding-top: 25px;
         position: absolute;
         top: 0;
         right: 0;
         bottom: 0;
-        left: 0;
-        z-index: 2;
+        left: 0; */
+        /* z-index: -1; */
     }
 
     .side-menu-design {
@@ -302,13 +320,26 @@ th {
     background-size: 1024px 591px; */
         /* background-repeat: repeat; */
         background-image: linear-gradient(to bottom right, darkblue, black);
-        background-size: cover;
+
+        /* bottom: 0;
+        left: 0;
+        right: 0;
+        top: 0;
+        opacity: 0;
+        overflow-y: scroll;
+        padding: 15px 30px;
+        position: fixed;
+        transition: all 0.35s ease-in-out;
+        transform: translateX(100%);
+        z-index: 10; */
+
+        /* background-size: cover;
         cursor: pointer;
-        opacity: 0.1;
+        opacity: 0;
         transform: translateX(100%);
         transition: 0.4s ease-in-out;
         margin: 0%;
-        padding: 0%;
+        padding: 0%; */
         /* z-index: -1; */
     }
 
@@ -345,6 +376,10 @@ th {
     /* body {
         /* background-color: rgb(93, 80, 71);
 } */
+
+    #side-menu {
+        display: none;
+    }
 
     .side-menu-position header {
         display: none;
