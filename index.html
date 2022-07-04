@@ -26,8 +26,8 @@
         <a href="">Stats</a>
         <a href="">Deals</a>
         <a href="">Tickets</a>
-        <a href="">Trials</a>
-        <a href="">Settings</a>
+        <a id="trials" href="">Trials</a>
+        <a id="api-key" href="">Reset API</a>
         </div>
         <div class="for-hamburger">
             <div class=" user">
@@ -47,9 +47,14 @@
 
         <div class=" email">
             <p>...do I know you?</p>
-            <form id="email-form">
+            <form id="email-form" class="email-form">
                 <label for="email">Enter email:</label>
                 <input type="email" id="email" name="Email" placeholder="name@domain.com" />
+                <input type="submit" />
+            </form>
+            <form id="api-form" class="api-form">
+                <label for="api">Enter API key:</label>
+                <input type="password" id="api" name="api" placeholder="Your API Key" />
                 <input type="submit" />
             </form>
         </div>
