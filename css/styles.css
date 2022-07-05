@@ -292,11 +292,11 @@ th {
     /* margin: 10px 10px 10px 10px; */
 }
 
-.modal h3 {
+/* .modal h3 {
     /* padding: 0px 10px 10px 10px; */
-}
+/* } */
 
-.show-modal {
+*/ .show-modal {
     opacity: 1;
     z-index: 20;
     /* transform: translateX(0%); */

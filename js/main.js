@@ -54,6 +54,8 @@ emailFormCapture.style.display = "none";
 
 // var apiValue = "";
 
+// const contactTableName = document.querySelector("#contact-name");
+
 apiFormCapture.addEventListener('submit', function (event) {
 
     event.preventDefault();
@@ -91,7 +93,13 @@ apiFormCapture.addEventListener('submit', function (event) {
         console.log(email);
         console.log(apiValue);
 
+
+
+
+
+
         async function anyname() {
+
             console.log(email);
             console.log(apiValue);
 
@@ -103,36 +111,151 @@ apiFormCapture.addEventListener('submit', function (event) {
 
             console.log(data);
 
+            const contactName = `${data.properties.firstname.value} ${data.properties.lastname.value}`
+
+            // const milliseconds = 1575909015 * 1000 // 1575909015000
+
+            // const dateObject = data.properties.createdate.value * 1000;
+
+            // console.log(dateObject);
+
+            // const humanDateFormat = dateObject.toLocaleString("en-US", { year: "numeric" });
+
+            // console.log(humanDateFormat);
+
+
+            // const createDate = data.properties.createdate.value
+
+            console.log(contactName);
+
+            var contactTable = document.getElementById('contact-information');
+
+            contactTable.rows[1].cells[1].innerHTML = contactName;
+
+            if (data.properties.associatedcompanyid.value.length > 5) { getCompany(data.properties.associatedcompanyid.value) }
+            console.log(email);
+            console.log(apiValue);
+            console.log(data.properties.associatedcompanyid.value);
+
+            var companyId = data.properties.associatedcompanyid.value;
+
+
+            async function getCompany(companyId) {
+
+                // const companyId = data.properties.associatedcompanyid.value;
+
+                const urlCompany = `https://api.hubapi.com/companies/v2/companies/${companyId}?hapikey=${apiValue}`;
+
+                const response = await fetch(urlCompany);
+
+                const data = await response.json();
+
+                console.log(data);
+
+                const companyName = data.properties.name.value;
+                const companyAddress = `${data.properties.city.value}, ${data.properties.country.value}`;
+                const companyDeals = data.properties.hs_num_open_deals.value;
+                const industry = data.properties.industry.value;
+                const portal = data.portalid;
+
+                contactTable.rows[2].cells[1].innerHTML = companyName;
+                contactTable.rows[3].cells[1].innerHTML = companyAddress;
+                contactTable.rows[4].cells[1].innerHTML = industry;
+                contactTable.rows[7].cells[1].innerHTML = companyDeals;
+                contactTable.rows[5].cells[1].innerHTML = portal;
+
+
+                if (companyDeals > 0) { getDeals(companyId) }
+                console.log(email);
+                console.log(apiValue);
+
+
+                async function getDeals(companyId) {
+
+                    // const companyId = data.properties.associatedcompanyid.value;
+
+                    const urlDeals = `https://api.hubapi.com/deals/v1/deal/associated/company/${companyId}/paged?hapikey=${apiValue}&includeAssociations=true&limit=10&properties=dealname`;
+
+                    // `https://api.hubapi.com/deals/v1/deal/associated/company/${companyId}/paged?hapikey=${apiValue}&includeAssociations=true&limit=10&properties=dealname`
+
+                    const response = await fetch(urlDeals);
+
+                    const data = await response.json();
+
+                    console.log(data);
+                    console.log(companyDeals);
+                    console.log(data.deals.length);
+
+                    const dealId = data.deals[0].dealId;
+                    console.log(dealId);
+
+                    var dealTable = document.getElementById("deal-table");
+                    var rows = document.getElementById("deal-table").rows.length;
+
+                    console.log(`Rows ${rows}`);
+
+
+                    for (let i = 0; i < data.deals.length; i++) {
+                        let dealId = data.deals[i].dealId;
+
+                        console.log(`i=${i} and dealid=${dealId}`);
+                        console.log(`companyDeals=${companyDeals} and data.deal.length=${data.deals.length}`)
+
+
+                        if (companyDeals >= data.deals.length) { indivDeals(dealId) }
+
+                        async function indivDeals(dealId) {
+
+                            // const dealId = data.deals[2]
+
+                            const urlDeals = `https://api.hubapi.com/deals/v1/deal//${dealId}?hapikey=${apiValue}`;
+
+                            // https://api.hubapi.com/deals/v1/deal/18479339?hapikey=demo        
+
+                            const response = await fetch(urlDeals);
+
+                            const data = await response.json();
+
+                            console.log(data);
+                            // if (data.deal.isDeleted.value = )
+                            var row = dealTable.insertRow(1);
+
+                            var dealName = row.insertCell(0);
+                            var dealStage = row.insertCell(1);
+                            var amount = row.insertCell(2);
+                            var closeDate = row.insertCell(3);
+
+                            dealName.innerHTML = data.properties.dealname.value;;
+                            dealStage.innerHTML = data.properties.dealstage.value;
+                            amount.innerHTML = data.properties.amount.value;
+                            closeDate.innerHTML = data.properties.closedate.value;
+
+
+                            // console.log(data);
+                            // console.log(companyDeals);
+                            // console.log(data.deals.length);
+                        }
+                        contactTable.rows[7].cells[1].innerHTML = i + 1;
+
+                    }
+
+                }
+                async function getTickets(companyId) {
+
+                }
+
+            }
+
+
         }
 
+        emailFormCapture.reset();
 
-
-        // emailFormCapture.reset();
     });
-    // apiFormCapture.reset();
 
-    // document.getElementById('trials').addEventListener('click', function () {
-    //     console.log("test");
-    // });
 
 });
 
-// buildUrl()
-// async function buildUrl(email, apiValue) {
-//     console.log(email);
-//     console.log(apiValue);
-
-
-
-//     const urlString = `https://api.hubapi.com/contacts/v1/contact/email/${email}/profile?hapikey=${apiValue}`;
-
-//     const response = await fetch(urlString);
-
-//     const data = await response.json();
-
-//     // console.log(data.main.temp - 273.15)
-
-// }
 
 
 
