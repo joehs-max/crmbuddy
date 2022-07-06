@@ -47,16 +47,20 @@
 
         <div class=" email">
             <p>...do I know you?</p>
-            <form id="email-form" class="email-form">
-                <label for="email">Enter email:</label>
-                <input type="email" id="email" name="Email" placeholder="name@domain.com" />
-                <input type="submit" />
-            </form>
-            <form id="api-form" class="api-form">
-                <label for="api">Enter API key:</label>
-                <input type="password" id="api" name="api" placeholder="Your API Key" />
-                <input type="submit" />
-            </form>
+            <div class="forms">
+                <form id="email-form" class="email-form">
+                    <label for="email">Enter email:</label>
+                    <input type="email" id="email" name="Email" placeholder="name@domain.com" />
+                    <input type="submit" />
+                </form>
+                <p id="dom-api"></p>
+                <form id="api-form" class="api-form">
+                    <label for="api">Enter API key:</label>
+                    <input type="password" id="api" name="api" placeholder="Your API Key" />
+                    <input type="submit" />
+                </form>
+                <p class="error-message" id="error-message"></p>
+            </div>
         </div>
 
         <section class="tables">
@@ -88,7 +92,7 @@
                         <td id="portal"></td>
                     </tr>
                     <tr>
-                        <td>Active trial (Y/N)</td>
+                        <td>Job title</td>
                         <td></td>
                     </tr>
                     <tr>
@@ -97,6 +101,10 @@
                     </tr>
                     <tr>
                         <td>Tickets #</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>email</td>
                         <td></td>
                     </tr>
                 </table>
@@ -133,14 +141,14 @@
                 </div>
                 <div class="Tickets"></div>
                 <h3>Tickets</h3>
-                <table>
+                <table id="ticket-table">
                     <tr>
                         <th>Name</th>
                         <th>Issue</th>
                         <th>Status</th>
                         <th>Create date</th>
                     </tr>
-                    <tr>
+                    <!-- <tr>
                         <td>Data</td>
                         <td>Data</td>
                         <td>Data</td>
@@ -157,7 +165,7 @@
                         <td>Data</td>
                         <td>Data</td>
                         <td>Data</td>
-                    </tr>
+                    </tr> -->
                 </table>
             </div>
             </div>

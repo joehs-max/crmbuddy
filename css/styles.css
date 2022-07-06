@@ -144,6 +144,17 @@ header p {
     padding-right: 20px;
 }
 
+.forms {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.error-message {
+    margin-left: 20px;
+    font-size: 15px;
+}
+
 input[type=email],
 input[type=password] {
     background-color: rgb(210, 211, 212);
@@ -192,11 +203,17 @@ th,
 td {
     border-bottom: 1px solid;
     border-color: rgb(223, 157, 113);
+    padding-right: 10px;
+    min-width: 50px;
 }
 
 table {
-    width: 100%;
+    /* maxwidth: 90%; */
+    max-width: 90%;
+    /* width: 100%; */
     border-color: rgb(223, 157, 113);
+    /* margin: 0px 20px 0px 20px; */
+    margin-right: 50px;
 }
 
 th {
@@ -211,6 +228,8 @@ th {
     color: rgb(210, 211, 212);
     font-size: 12px;
     padding: 10px;
+    /* margin: 0px 20px 0px 20px; */
+    /* margin-right: 50px; */
 }
 
 .tables h3 {
@@ -309,7 +328,7 @@ th {
 
 
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 700px) {
     body {
         /* background-color: rgb(93, 80, 71); */
         /* background-color: #6d7878; */
@@ -318,7 +337,7 @@ th {
         margin: 0px 10px 0px 10px;
         /* background: fixed; */
         background-size: cover;
-        height: 100vh;
+        height: 100%;
     }
 
     .desktop-nav,
@@ -412,9 +431,16 @@ th {
         transform: translateX(0%);
     }
 
+    .forms {
+        display: flex;
+        flex-direction: column;
+        /* align-items: center; */
+    }
+
+
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 700px) {
     /* body {
         /* background-color: rgb(93, 80, 71);
 } */
