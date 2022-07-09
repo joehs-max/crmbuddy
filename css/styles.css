@@ -201,10 +201,15 @@ input[type=reset] {
 table,
 th,
 td {
-    border-bottom: 1px solid;
+    /* border-bottom: 1px solid; */
     border-color: rgb(223, 157, 113);
     padding-right: 10px;
     min-width: 50px;
+}
+
+th {
+    border-bottom: 1px solid;
+
 }
 
 table {
@@ -212,6 +217,8 @@ table {
     max-width: 90%;
     /* width: 100%; */
     border-color: rgb(223, 157, 113);
+    border: 1px solid;
+    border-radius: 5px;
     /* margin: 0px 20px 0px 20px; */
     margin-right: 50px;
 }
@@ -271,6 +278,7 @@ th {
 .mask {
     /* display: flex; */
     position: fixed;
+    display: flex;
     background-color: rgba(128, 128, 128, .8);
     top: 0;
     left: 0;
@@ -286,14 +294,14 @@ th {
 .modal {
     display: flex;
     flex-direction: column;
-    position: fixed;
-    top: 50%;
+    /* top: 0;
+    left: 0; */
     left: 50%;
     /* top: 200px;
     left: 200px; */
     max-height: 300px;
     max-width: 300px;
-    opacity: 0;
+    /* opacity: 0; */
     background-color: rgb(210, 211, 212);
     border: 5px solid rgb(252, 143, 77);
     margin: auto;
@@ -311,14 +319,18 @@ th {
     /* margin: 10px 10px 10px 10px; */
 }
 
+/* .approve-trial {
+    display: none;
+} */
+
 /* .modal h3 {
     /* padding: 0px 10px 10px 10px; */
 /* } */
 
-*/ .show-modal {
+.show-modal {
     opacity: 1;
     z-index: 20;
-    /* transform: translateX(0%); */
+    transform: translateX(0%);
 }
 
 .show-mask {

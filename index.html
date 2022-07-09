@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
     <title>CRM Buddy</title>
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" -->
+    <!-- integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous"> -->
     <link rel="icon" type="image/x-icon" href="images/CRM-Buddy-Logo.png">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/styles.css">
@@ -13,19 +15,31 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;1,300&display=swap"
         rel="stylesheet">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" <!-- -->
     <!-- <link rel="images" href="images/"> -->
 
 </head>
 
 <body>
 
+    <div class="mask" role="dialog" id="mask">
+        <aside class="modal" id="alert">
+            <h3 id="modal-message">This contact does not exist in your database</h3>
+            <a href="" id="close-dialog">Create or search again</a>
+            <!-- <div class="exit-options">
+                <a href="" class="approve-trial-dialog">Confirm</a>
+                <a href="" class="disapprove-trial-dialog">Cancel</a>
+            </div> -->
+        </aside>
+    </div>
+
     <header class="desktop" id="top-nav">
 
         <img class="logo" src="images/CRM-Buddy-Logo.png" alt="CRM Buddy Logo"">
         <div class=" desktop-nav">
-        <a href="">Stats</a>
-        <a href="">Deals</a>
-        <a href="">Tickets</a>
+        <a id="stats" href="">Stats</a>
+        <a id="deals" href="">Deals</a>
+        <a id="tickets" href="">Tickets</a>
         <a id="trials" href="">Trials</a>
         <a id="api-key" href="">Reset API</a>
         </div>
@@ -53,7 +67,7 @@
                     <input type="email" id="email" name="Email" placeholder="name@domain.com" />
                     <input type="submit" />
                 </form>
-                <p id="dom-api"></p>
+                <!-- <p id="dom-api"></p> -->
                 <form id="api-form" class="api-form">
                     <label for="api">Enter API key:</label>
                     <input type="password" id="api" name="api" placeholder="Your API Key" />
@@ -88,7 +102,7 @@
                         <td id="industry"></td>
                     </tr>
                     <tr>
-                        <td>Hub ID:</td>
+                        <td>Company ID:</td>
                         <td id="portal"></td>
                     </tr>
                     <tr>
@@ -174,7 +188,7 @@
 
         <section class="approve-trial">
             <h3>Approve 14-day trial</h3>
-            <button id="test-area">Approve</button>
+            <button id="approve-trial">Data required</button>
         </section>
 
     </main>
@@ -210,13 +224,16 @@
         </ul>
     </aside>
 
-    <div class="mask" role="dialog" id="mask"></div>
-    <aside class="modal" id="alert">
-        <h3>This contact does not exist in your database</h3>
-        <a href="" id="close-dialog">Create or search again</a>
-    </aside>
+    <!-- <div class="mask" role="dialog" id="mask">
+        <aside class="modal" id="alert">
+            <h3>This contact does not exist in your database</h3>
+            <a href="" id="close-dialog">Create or search again</a>
+        </aside>
+    </div> -->
 
-
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script> -->
     <script src="js/main.js"></script>
 </body>
 
