@@ -20,6 +20,7 @@ let closeDialog = document.getElementById('close-dialog');
 
 
 // Event listener setup - separate listeners for each nav/action button
+// There is an opportunity for some refactoring of code here - time permitting
 
 document.getElementById('menu-trigger').addEventListener('click', sideMenuAppears);
 document.getElementById('menu-close').addEventListener('click', sideMenuDisappears);
@@ -223,7 +224,6 @@ async function getDeals(companyId, apiValue, dealTable, contactId) {
             const urlDeals = `https://api.hubapi.com/deals/v1/deal//${dealId}?hapikey=${apiValue}`;
             const response = await fetch(urlDeals);
             const data = await response.json();
-            // console.log(data);
             let row = dealTable.insertRow(1);
 
             let dealName = row.insertCell(0);

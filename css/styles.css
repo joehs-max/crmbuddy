@@ -2,8 +2,7 @@ body {
     font-family: 'Lato', sans-serif;
     background-image: linear-gradient(to bottom right, darkblue, black);
     background-size: cover;
-    /* height: 100%; */
-    height: 100vh;
+    background-attachment: fixed;
 }
 
 header {
@@ -278,7 +277,6 @@ th {
     body {
         margin: 0px 10px 0px 10px;
         background-size: cover;
-        height: 100%;
     }
 
     .desktop-nav,
