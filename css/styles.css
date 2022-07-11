@@ -1,24 +1,16 @@
 body {
     font-family: 'Lato', sans-serif;
-    /* background-color: antiquewhite; */
     background-image: linear-gradient(to bottom right, darkblue, black);
-    /* background-repeat: no-repeat; */
     background-size: cover;
+    /* height: 100%; */
     height: 100vh;
 }
 
 header {
-    /* background-color: rgb(93, 80, 71); */
-    /* background-color: #6d7878; */
-    /* background-color: #585659; */
-    /* background-color: black; */
-    /* background-color: darkblue; */
-    /* background-image: linear-gradient(to bottom right, darkblue, black); */
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     height: 40px;
-    /* height: auto; */
     padding: 15px 25px;
     width: calc(100% - 50px);
     align-items: center;
@@ -85,21 +77,7 @@ header p {
     width: 20px;
     margin: 10px;
     cursor: pointer;
-
 }
-
-/* Suppress transitions on standard hamburger menu
-.hamburger:hover div:first-child {
-    transform: translateY(5px) rotate(135deg);
-}
-
-.hamburger:hover div:nth-child(2) {
-    transform: scale(0);
-}
-
-.hamburger:hover div:last-child {
-    transform: translateY(-5px) rotate(-135deg)
-} */
 
 .hamburger-close div {
     background-color: rgb(252, 143, 77);
@@ -113,7 +91,6 @@ header p {
     width: 20px;
     margin: 10px;
     cursor: pointer;
-
 }
 
 .hamburger-close div:first-child {
@@ -128,13 +105,9 @@ header p {
     transform: translateY(-5px) rotate(-135deg)
 }
 
-
 .email {
     display: flex;
     flex-direction: column;
-    /* background-color: rgb(93, 80, 71); */
-    /* background-color: #6d7878; */
-    /* background-color: #585659; */
     color: rgb(210, 211, 212);
     font-size: 12px;
     padding: 10px 0px 10px 10px;
@@ -169,6 +142,7 @@ input[type=email]:hover {
     background-color: lightgreen;
 }
 
+/* Initially hide email form */
 .email-form {
     display: "none";
 }
@@ -177,13 +151,6 @@ input[type=password] {
     background-color: rgb(242, 88, 88);
     color: white;
 }
-
-/* .api-form {
-    border-width: 3px;
-    border-style: solid;
-    border-color: rgb(252, 143, 77);
-    border-radius: 3px;
-} */
 
 input[type=button],
 input[type=submit],
@@ -197,11 +164,9 @@ input[type=reset] {
     cursor: pointer;
 }
 
-
 table,
 th,
 td {
-    /* border-bottom: 1px solid; */
     border-color: rgb(223, 157, 113);
     padding-right: 10px;
     min-width: 50px;
@@ -209,17 +174,14 @@ td {
 
 th {
     border-bottom: 1px solid;
-
 }
 
 table {
-    /* maxwidth: 90%; */
-    max-width: 90%;
-    /* width: 100%; */
+    width: 100%;
+    min-width: 350px;
     border-color: rgb(223, 157, 113);
     border: 1px solid;
     border-radius: 5px;
-    /* margin: 0px 20px 0px 20px; */
     margin-right: 50px;
 }
 
@@ -229,14 +191,9 @@ th {
 }
 
 .tables {
-    /* background-color: rgb(93, 80, 71); */
-    /* background-color: #6d7878; */
-    /* background-color: black; */
     color: rgb(210, 211, 212);
     font-size: 12px;
     padding: 10px;
-    /* margin: 0px 20px 0px 20px; */
-    /* margin-right: 50px; */
 }
 
 .tables h3 {
@@ -247,8 +204,6 @@ th {
     display: flex;
     margin: 10px;
     justify-content: center;
-    /* background-color: rgb(93, 80, 71); */
-    /* background-color: #6d7878; */
     color: rgb(210, 211, 212);
     font-size: 12px;
     padding: 10px 0px 10px 10px;
@@ -267,8 +222,6 @@ th {
 }
 
 .rights {
-    /* background-color: rgb(93, 80, 71); */
-    /* background-color: #6d7878; */
     color: rgb(210, 211, 212);
     font-size: 8px;
     padding: 5px 0px 5px 10px;
@@ -276,7 +229,6 @@ th {
 }
 
 .mask {
-    /* display: flex; */
     position: fixed;
     display: flex;
     background-color: rgba(128, 128, 128, .8);
@@ -287,28 +239,21 @@ th {
     align-items: center;
     justify-content: center;
     opacity: 0;
-    /* some test values */
     z-index: -1000;
 }
 
 .modal {
     display: flex;
     flex-direction: column;
-    /* top: 0;
-    left: 0; */
     left: 50%;
-    /* top: 200px;
-    left: 200px; */
     max-height: 300px;
     max-width: 300px;
-    /* opacity: 0; */
     background-color: rgb(210, 211, 212);
     border: 5px solid rgb(252, 143, 77);
     margin: auto;
     padding: 10px;
     text-align: center;
     transform: translate(-50%, -50%);
-    /* z-index: 2; */
 }
 
 .modal a {
@@ -316,16 +261,7 @@ th {
     color: rgb(210, 211, 212);
     background-color: rgb(252, 143, 77);
     padding: 10px 10px 10px 10px;
-    /* margin: 10px 10px 10px 10px; */
 }
-
-/* .approve-trial {
-    display: none;
-} */
-
-/* .modal h3 {
-    /* padding: 0px 10px 10px 10px; */
-/* } */
 
 .show-modal {
     opacity: 1;
@@ -338,16 +274,9 @@ th {
     z-index: 10;
 }
 
-
-
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 800px) {
     body {
-        /* background-color: rgb(93, 80, 71); */
-        /* background-color: #6d7878; */
-        /* background-image: linear-gradient(to bottom right, darkblue, black); */
-        /* background-image: inherit; */
         margin: 0px 10px 0px 10px;
-        /* background: fixed; */
         background-size: cover;
         height: 100%;
     }
@@ -357,13 +286,7 @@ th {
         display: none;
     }
 
-    /* Need to check function */
-    /* #top-nav {
-        position: fixed;
-    } */
-
     .side-menu-position {
-
         bottom: 0;
         left: 0;
         right: 0;
@@ -376,53 +299,17 @@ th {
         transition: all 0.35s ease-in-out;
         transform: translateX(100%);
         z-index: 10;
-
-        /* padding-top: 25px;
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0; */
-        /* z-index: -1; */
     }
 
     .side-menu-design {
-        /* background-color: rgb(93, 80, 71); */
-        /* background-color: #6d7878; */
-        /* background-image: url(/images/Trends-Digitalisierung-CRM-2018-1024x591.jpeg);
-    background-size: 1024px 591px; */
-        /* background-repeat: repeat; */
         background-image: linear-gradient(to bottom right, darkblue, black);
-
-        /* bottom: 0;
-        left: 0;
-        right: 0;
-        top: 0;
-        opacity: 0;
-        overflow-y: scroll;
-        padding: 15px 30px;
-        position: fixed;
-        transition: all 0.35s ease-in-out;
-        transform: translateX(100%);
-        z-index: 10; */
-
-        /* background-size: cover;
-        cursor: pointer;
-        opacity: 0;
-        transform: translateX(100%);
-        transition: 0.4s ease-in-out;
-        margin: 0%;
-        padding: 0%; */
-        /* z-index: -1; */
     }
 
     .side-menu-content {
         color: rgb(210, 211, 212);
         font-size: 24px;
-        /* could use ems here I guess but eh... */
         margin: 25px;
         padding-left: 0;
-        /* zeroing it out */
     }
 
     .side-menu-content li {
@@ -446,16 +333,18 @@ th {
     .forms {
         display: flex;
         flex-direction: column;
-        /* align-items: center; */
+    }
+
+    table {
+        width: 100%;
+        /* max-width: 90%; */
+        min-width: 350px;
     }
 
 
 }
 
-@media only screen and (min-width: 700px) {
-    /* body {
-        /* background-color: rgb(93, 80, 71);
-} */
+@media only screen and (min-width: 800px) {
 
     #side-menu {
         display: none;
@@ -469,7 +358,6 @@ th {
         display: none;
     }
 
-
     .hamburger div {
         display: none;
     }
@@ -482,8 +370,7 @@ th {
 
     table {
         width: 100%;
+        max-width: 90%;
+        min-width: 350px;
     }
-
-
-
 }
