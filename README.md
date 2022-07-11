@@ -21,6 +21,8 @@
 
  FUNCTIONAL NOTES
  ================
+ Please note that an extension/service such as "Allow CORS: Access-Control-Allow-Origin" is needed to allow data from API calls to be received/processed.
+ 
  All nav buttons in views greater than 800px width trigger a modal with an button specific "under construction" message (The reset API button has a defaul action of refreshing the screen thus necessitating re-entry of an API Key)
  The Approve trial button is similarly constructed but the messaging is altered depending on the existance of a valid email address.
  All of these nav buttons trigger the same modal/mask with differing messaging based on context.
